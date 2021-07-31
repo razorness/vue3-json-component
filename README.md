@@ -1,8 +1,14 @@
-# Vue JSON Component
+# Vue3 JSON Component
 
-[![npm version](https://badge.fury.io/js/vue-json-component.svg)](https://badge.fury.io/js/vue-json-component) [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/) ![npm bundle size](https://img.shields.io/bundlephobia/min/vue-json-component.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+---
+**NOTE**
 
-[Demo](http://tylerkrupicka.com/vue-json-component/)
+This is primary a fork of [vue-json-component](https://github.com/tylerkrupicka/vue-json-component) which was created to achieve quick Vue 3 support.
+---
+
+[![npm version](https://badge.fury.io/js/vue3-json-component.svg)](https://badge.fury.io/js/vue3-json-component) [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/) ![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-json-component.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
+[Demo](http://tylerkrupicka.com/vue3-json-component/)
 
 A collapsable tree view for JSON. This package has some similarites with [vue-json-tree-view](https://github.com/michaelfitzhavey/vue-json-tree-view) so I'll address the differences below. I'm not contributing this back to that package because it would require breaking API changes, and the code is entirely different. **Contributions welcome!**
 
@@ -13,7 +19,7 @@ A collapsable tree view for JSON. This package has some similarites with [vue-js
 This package has a few major improvements over predecessors: builds, styles, and customization. For builds, this package ships CommonJS, Module, and UNPKG builds with no dependencies. [vue-json-tree-view](https://github.com/michaelfitzhavey/vue-json-tree-view) bundles in lots of dependencies -- including lodash. I also export global Vue imports, local Vue imports, and TypeScript declarations. The code itself is about as small as it can be while being easy to follow.
 
 - [vue-json-tree-view (84KB)](https://bundlephobia.com/result?p=vue-json-tree-view@2.1.4)
-- [vue-json-component (9KB)](https://bundlephobia.com/result?p=vue-json-component@0.3.0)
+- [vue3-json-component (9KB)](https://bundlephobia.com/result?p=vue3-json-component@0.3.0)
 
 The styles in this package are all scoped, with key colors still being customizable. There are no extra margins or overflow rules and text properties are all inherited from the page. This makes the view much easier to integrate anywhere you need it.
 
@@ -24,14 +30,14 @@ The default color theme is based on solarized, and font weights are modified to 
 ### Install
 
 ```bash
-npm i vue-json-component
-yarn add vue-json-component
+npm i vue3-json-component
+yarn add vue3-json-component
 ```
 
 ### Import Locally
 
 ```js
-import { JSONView } from 'vue-json-component';
+import { JSONView } from 'vue3-json-component';
 export default Vue.extend({
   components: { 'json-view': JSONView }
 });
@@ -40,7 +46,7 @@ export default Vue.extend({
 ### Import Globally
 
 ```js
-import JSONView from 'vue-json-component';
+import JSONView from 'vue3-json-component';
 Vue.use(JSONView);
 ```
 
