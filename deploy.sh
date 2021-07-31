@@ -2,7 +2,7 @@
 # abort on errors
 set -e
 # build
-yarn run build
+vue-cli-service build dev/serve.ts
 # navigate into the build output directory
 cd dist
 # if you are deploying to a custom domain
