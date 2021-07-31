@@ -13,8 +13,6 @@ import ttypescript from 'ttypescript';
 import typescript from 'rollup-plugin-typescript2';
 import minimist from 'minimist';
 import scss from 'rollup-plugin-scss';
-import postcss from 'postcss';
-import autoprefixer from 'autoprefixer';
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -46,13 +44,14 @@ const baseConfig = {
         replace: {
             'process.env.NODE_ENV': JSON.stringify('production')
         },
-        vue    : {},
+        vue    : {
+            preprocessStyles: true
+        },
         postVue: [
             resolve({
                 extensions: [ '.js', '.jsx', '.ts', '.tsx', '.vue' ]
             }),
             scss({
-                processor   : () => postcss([ autoprefixer() ]),
                 includePaths: [
                     path.join(__dirname, '../../node_modules/'),
                     'node_modules/'
@@ -101,7 +100,7 @@ if (!argv.format || argv.format === 'es') {
         input  : 'src/entry.esm.ts',
         external,
         output : {
-            file   : 'dist/JSONView.esm.js',
+            file   : 'dist/JsonView.esm.js',
             format : 'esm',
             exports: 'named'
         },
@@ -140,9 +139,9 @@ if (!argv.format || argv.format === 'cjs') {
         external,
         output : {
             compact: true,
-            file   : 'dist/JSONView.ssr.js',
+            file   : 'dist/JsonView.ssr.js',
             format : 'cjs',
-            name   : 'JSONView',
+            name   : 'JsonView',
             exports: 'auto',
             globals
         },
@@ -163,9 +162,9 @@ if (!argv.format || argv.format === 'iife') {
         external,
         output : {
             compact: true,
-            file   : 'dist/JSONView.min.js',
+            file   : 'dist/JsonView.min.js',
             format : 'iife',
-            name   : 'JSONView',
+            name   : 'JsonView',
             exports: 'auto',
             globals
         },

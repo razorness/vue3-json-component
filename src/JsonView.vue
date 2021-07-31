@@ -10,7 +10,7 @@
 
 <script lang="ts">
 	import { defineComponent, PropType } from 'vue';
-	import JSONViewItem from './JSONViewItem.vue';
+	import JsonViewItem from './JsonViewItem.vue';
 	import { ColorMode, JsonData, JsonDataType, SelectedJsonData } from '@/types';
 
 	export default /*#__PURE__*/defineComponent({
@@ -35,9 +35,7 @@
 				default : ColorMode.LIGHT
 			}
 		},
-		components: {
-			'json-view-item': JSONViewItem
-		},
+		components: { JsonViewItem },
 		emits     : [ 'update:selected' ],
 		methods   : {
 			build(key: string, val: any, depth: number, path: string, includeKey: boolean): JsonData {

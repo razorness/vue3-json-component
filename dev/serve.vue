@@ -30,13 +30,11 @@
 
 <script lang="ts">
 	import { defineComponent } from 'vue';
-	import JsonView from '@/JSONView.vue';
+	import JsonView from '@/JsonView.vue';
 
 	export default defineComponent({
 		name      : 'ServeDev',
-		components: {
-			JsonView
-		},
+		components: { JsonView },
 		data() {
 			return {
 				events: [] as string[],

@@ -1,7 +1,7 @@
 import { App, Plugin } from 'vue';
 
 // Import vue component
-import component from '@/JSONView.vue';
+import component from '@/JsonView.vue';
 
 // Define typescript interfaces for installable component
 type InstallableComponent = typeof component & { install: Exclude<Plugin['install'], undefined> };
@@ -15,7 +15,7 @@ export default /*#__PURE__*/((): InstallableComponent => {
 
   // Attach install function executed by Vue.use()
   installable.install = (app: App) => {
-    app.component('JSONView', installable);
+    app.component('JsonView', installable);
   };
   return installable;
 })();

@@ -23,10 +23,10 @@
     "type": "git",
     "url": "https://github.com/razorness/vue3-json-component.git"
   },
-  "main": "dist/JSONView.ssr.js",
-  "browser": "dist/JSONView.esm.js",
-  "module": "dist/JSONView.esm.js",
-  "unpkg": "dist/JSONView.min.js",
+  "main": "dist/JsonView.ssr.js",
+  "browser": "dist/JsonView.esm.js",
+  "module": "dist/JsonView.esm.js",
+  "unpkg": "dist/JsonView.min.js",
   "types": "dist/types/src/entry.esm.d.ts",
   "files": [
     "dist/*",
@@ -40,7 +40,8 @@
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts"
+    "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts",
+    "deploy:gh-pages": "vue-cli-service build dev/serve.ts && ./deploy.sh"
   },
   "dependencies": {},
   "devDependencies": {
@@ -69,6 +70,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.37.0",
     "sass-loader": "^10.2.0",
     "ttypescript": "^1.5.12",
     "typescript": "^4.0.3",
@@ -89,10 +91,5 @@
     "singleQuote": true,
     "endOfLine": "lf",
     "useTabs": true
-  },
-  "browserslist": [
-    "current node",
-    "last 2 versions and > 2%",
-    "ie > 10"
-  ]
+  }
 }
