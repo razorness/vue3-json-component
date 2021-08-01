@@ -24,7 +24,7 @@ builds with no dependencies. [vue-json-tree-view](https://github.com/michaelfitz
 also export global Vue imports, local Vue imports, and TypeScript declarations. The code itself is about as small as it can be while being easy to follow.
 
 - [vue-json-tree-view (84KB)](https://bundlephobia.com/result?p=vue-json-tree-view@2.1.4)
-- [vue3-json-component (9KB)](https://bundlephobia.com/result?p=vue3-json-component@0.3.0)
+- [vue3-json-component (9KB)](https://bundlephobia.com/package/vue3-json-component@0.4.1)
 
 The styles in this package are all scoped, with key colors still being customizable. There are no extra margins or overflow rules and text properties are all
 inherited from the page. This makes the view much easier to integrate anywhere you need it.
