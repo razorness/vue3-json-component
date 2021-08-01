@@ -10,14 +10,14 @@ type InstallableComponent = typeof component & { install: Exclude<Plugin['instal
 // IIFE injects install function into component, allowing component
 // to be registered via Vue.use() as well as Vue.component(),
 export default /*#__PURE__*/((): InstallableComponent => {
-  // Assign InstallableComponent type
-  const installable = component as unknown as InstallableComponent;
+	// Assign InstallableComponent type
+	const installable = component as unknown as InstallableComponent;
 
-  // Attach install function executed by Vue.use()
-  installable.install = (app: App) => {
-    app.component('JsonView', installable);
-  };
-  return installable;
+	// Attach install function executed by Vue.use()
+	installable.install = (app: App) => {
+		app.component('JsonView', installable);
+	};
+	return installable;
 })();
 
 // It's possible to expose named exports when writing components that can

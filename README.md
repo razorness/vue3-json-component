@@ -48,7 +48,7 @@ import { defineComponent } from 'vue';
 import { JsonView } from 'vue3-json-component';
 
 export default defineComponent({
-    components: {JsonView}
+	components: {JsonView}
 })
 ```
 
@@ -64,7 +64,7 @@ Vue.use(JsonView);
 
 ```vue
 <template>
-    <json-view :data="data" />
+	<json-view :data="data"/>
 </template>
 
 ```
@@ -100,21 +100,22 @@ The font size and font family are inherited from the page. The component now sup
 
 ```vue
 <template>
-    <json-view
-        :data="data"
-        rootKey="view"
-        :maxDepth="1"
-        class="customize"
-    />
+	<json-view
+		:data="data"
+		rootKey="view"
+		:maxDepth="1"
+		class="customize"
+	/>
 </template>
 
 <style lang="scss" scoped>
-    .customize {
-    --vjc-valueKey-color: green;
-}
-    .customize.dark {
-    --vjc-valueKey-color: red;
-}
+	.customize {
+		--vjc-valueKey-color: green;
+	}
+
+	.customize.dark {
+		--vjc-valueKey-color: red;
+	}
 </style>
 ```
 
@@ -129,8 +130,8 @@ If you do not listen for the event, the styles will not indicate that values are
 
 ```vue
 <json-view
-    :data="data"
-    @update:selected="itemSelected"
+	:data="data"
+	@update:selected="itemSelected"
 />
 ```
 

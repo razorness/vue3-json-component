@@ -1,94 +1,95 @@
 {
-  "name": "vue3-json-component",
-  "version": "0.4.2",
-  "description": "A VueJS 3 JSON Tree View with no dependencies and module builds.",
-  "keywords": [
-    "vue",
-    "vue3",
-    "vuejs",
-    "vue3js",
-    "vue-component",
-    "vue3-component",
-    "JSON",
-    "tree",
-    "expand"
-  ],
-  "author": {
-    "name": "Volker Nauruhn",
-    "email": "mensch.meier@live.de",
-    "url": "razorness.de"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/razorness/vue3-json-component.git"
-  },
-  "main": "dist/JsonView.ssr.js",
-  "browser": "dist/JsonView.esm.js",
-  "module": "dist/JsonView.esm.js",
-  "unpkg": "dist/JsonView.min.js",
-  "types": "dist/types/src/entry.esm.d.ts",
-  "files": [
-    "dist/*",
-    "src/**/*.vue"
-  ],
-  "scripts": {
-    "serve": "vue-cli-service serve dev/serve.ts",
-    "prebuild": "rimraf ./dist",
-    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
-    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts",
-    "deploy:gh-pages": "./deploy.sh"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-typescript": "^7.14.5",
-    "@rollup/plugin-alias": "^3.1.2",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "@rollup/plugin-replace": "^2.4.2",
-    "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-plugin-typescript": "^4.5.13",
-    "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.1.5",
-    "@zerollup/ts-transform-paths": "^1.7.18",
-    "autoprefixer": "^9.8.6",
-    "cross-env": "^7.0.3",
-    "minimist": "^1.2.5",
-    "node-sass": "^6.0.1",
-    "postcss": "^8.3.6",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.52.8",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-scss": "^3.0.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "rollup-plugin-vue": "^6.0.0",
-    "sass": "^1.37.0",
-    "sass-loader": "^10.2.0",
-    "ttypescript": "^1.5.12",
-    "typescript": "^4.0.3",
-    "vue": "^3.0.5"
-  },
-  "peerDependencies": {
-    "vue": "^3.0.5"
-  },
-  "engines": {
-    "node": ">=12"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "prettier": {
-    "singleQuote": true,
-    "endOfLine": "lf",
-    "useTabs": true
-  }
+	"name": "vue3-json-component",
+	"version": "0.4.2",
+	"description": "A VueJS 3 JSON Tree View with no dependencies and module builds.",
+	"keywords": [
+		"vue",
+		"vue3",
+		"vuejs",
+		"vue3js",
+		"vue-component",
+		"vue3-component",
+		"JSON",
+		"tree",
+		"expand"
+	],
+	"author": {
+		"name": "Volker Nauruhn",
+		"email": "mensch.meier@live.de",
+		"url": "razorness.de"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/razorness/vue3-json-component.git"
+	},
+	"sideEffects": false,
+	"main": "dist/JsonView.ssr.js",
+	"browser": "dist/JsonView.esm.js",
+	"module": "dist/JsonView.esm.js",
+	"unpkg": "dist/JsonView.min.js",
+	"types": "dist/types/src/entry.esm.d.ts",
+	"files": [
+		"dist/*",
+		"src/**/*.vue"
+	],
+	"scripts": {
+		"serve": "vue-cli-service serve dev/serve.ts",
+		"prebuild": "rimraf ./dist",
+		"build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+		"build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+		"postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts",
+		"deploy:gh-pages": "./deploy.sh"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.14.6",
+		"@babel/preset-env": "^7.14.7",
+		"@babel/preset-typescript": "^7.14.5",
+		"@rollup/plugin-alias": "^3.1.2",
+		"@rollup/plugin-babel": "^5.3.0",
+		"@rollup/plugin-commonjs": "^14.0.0",
+		"@rollup/plugin-node-resolve": "^9.0.0",
+		"@rollup/plugin-replace": "^2.4.2",
+		"@vue/cli-plugin-babel": "^4.5.13",
+		"@vue/cli-plugin-typescript": "^4.5.13",
+		"@vue/cli-service": "^4.5.13",
+		"@vue/compiler-sfc": "^3.1.5",
+		"@zerollup/ts-transform-paths": "^1.7.18",
+		"autoprefixer": "^9.8.6",
+		"cross-env": "^7.0.3",
+		"minimist": "^1.2.5",
+		"node-sass": "^6.0.1",
+		"postcss": "^8.3.6",
+		"rimraf": "^3.0.2",
+		"rollup": "^2.52.8",
+		"rollup-plugin-postcss": "^4.0.0",
+		"rollup-plugin-scss": "^3.0.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"rollup-plugin-typescript2": "^0.30.0",
+		"rollup-plugin-vue": "^6.0.0",
+		"sass": "^1.37.0",
+		"sass-loader": "^10.2.0",
+		"ttypescript": "^1.5.12",
+		"typescript": "^4.0.3",
+		"vue": "^3.0.5"
+	},
+	"peerDependencies": {
+		"vue": "^3.0.5"
+	},
+	"engines": {
+		"node": ">=12"
+	},
+	"postcss": {
+		"plugins": {
+			"autoprefixer": {}
+		}
+	},
+	"prettier": {
+		"singleQuote": true,
+		"endOfLine": "lf",
+		"useTabs": true
+	}
 }
