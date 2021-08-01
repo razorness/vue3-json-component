@@ -7,7 +7,11 @@ This is primary a fork of [vue-json-component](https://github.com/tylerkrupicka/
 
 ---
 
-[![npm version](https://badge.fury.io/js/vue3-json-component.svg)](https://badge.fury.io/js/vue3-json-component) [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/) ![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-json-component.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![npm version](https://badge.fury.io/js/vue3-json-component.svg)](https://badge.fury.io/js/vue3-json-component)
+[![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
+![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-json-component.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [Demo](https://razorness.github.io/vue3-json-component/)
 
