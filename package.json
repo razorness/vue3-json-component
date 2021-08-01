@@ -30,8 +30,7 @@
   "types": "dist/types/src/entry.esm.d.ts",
   "files": [
     "dist/*",
-    "src/**/*.vue",
-    "src/**/*.ts"
+    "src/**/*.vue"
   ],
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
