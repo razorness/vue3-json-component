@@ -7,11 +7,9 @@ This is primary a fork of [vue-json-component](https://github.com/tylerkrupicka/
 
 ---
 
-[![npm version](https://badge.fury.io/js/vue3-json-component.svg)](https://badge.fury.io/js/vue3-json-component)
-[![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
-![npm bundle size](https://img.shields.io/bundlephobia/min/vue3-json-component.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+![npm](https://img.shields.io/npm/v/vue3-json-component.svg?style=flat-square)
+[![TypeScript](https://img.shields.io/badge/-Typescript-informational?style=flat-square)](https://www.typescriptlang.org/)
+[![vue2](https://img.shields.io/badge/vue-3.x-brightgreen.svg?style=flat-square)](https://vuejs.org/)
 
 [Demo](https://razorness.github.io/vue3-json-component/)
 
@@ -67,6 +65,7 @@ Vue.use(JsonView);
 ### Use
 
 ```vue
+
 <template>
 	<json-view :data="data"/>
 </template>
@@ -89,20 +88,52 @@ The font size and font family are inherited from the page. The component now sup
 ⚠️ This API has changed to CSS Variables. All of these can be customized for light _and_ dark mode as is documented below.
 
 ```css
---vjc-key-color: #0977e6;
---vjc-valueKey-color: #073642;
---vjc-string-color: #268bd2;
---vjc-number-color: #2aa198;
---vjc-boolean-color: #cb4b16;
---vjc-null-color: #6c71c4;
---vjc-arrow-size: 6px;
---vjc-arrow-color: #444;
---vjc-hover-color: rgba(0, 0, 0, 0.15);
+--vjc-key-color: #0977e6
+
+;
+--vjc-valueKey-color: #073642
+
+;
+--vjc-string-color: #268bd2
+
+;
+--vjc-number-color: #2aa198
+
+;
+--vjc-boolean-color: #cb4b16
+
+;
+--vjc-null-color: #6c71c4
+
+;
+--vjc-arrow-size:
+
+6
+px
+
+;
+--vjc-arrow-color: #444
+
+;
+--vjc-hover-color:
+rgba
+
+(
+0
+,
+0
+,
+0
+,
+0.15
+)
+;
 ```
 
 ### Example
 
 ```vue
+
 <template>
 	<json-view
 		:data="data"
@@ -133,6 +164,7 @@ You can allow users to click elements, and receive an event when this occurs. Th
 If you do not listen for the event, the styles will not indicate that values are clickable.
 
 ```vue
+
 <json-view
 	:data="data"
 	@update:selected="itemSelected"
