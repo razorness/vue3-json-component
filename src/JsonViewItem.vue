@@ -16,7 +16,7 @@
 				v-for="child in data.children"
 				:key="getKey(child)"
 				:data="child"
-				v-show="open"
+				v-if="open"
 				:maxDepth="maxDepth"
 				:canSelect="canSelect"
 			/>

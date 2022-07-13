@@ -32,6 +32,15 @@
 	import { defineComponent } from 'vue';
 	import JsonView from '@/JsonView.vue';
 
+	// large chunked data, takes 2s to render all at once.
+	const largedata: any = {};
+	for (let i = 0; i < 100; i++) {
+		const chunk: any = largedata[i] = []
+		for (let j = 0; j < 100; j++) {
+			chunk.push(j);
+		}
+	}
+
 	export default defineComponent({
 		name      : 'ServeDev',
 		components: { JsonView },
@@ -64,7 +73,8 @@
 					],
 					object   : {
 						working: 'properly'
-					}
+					},
+					largedata
 				};
 			},
 			colorScheme(): string {
